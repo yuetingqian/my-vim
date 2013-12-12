@@ -61,7 +61,7 @@ Bundle 'davidhalter/jedi-vim'
 filetype plugin indent on
 
 hi TabLineFill ctermfg=Gray ctermbg=Gray
-hi TabLine ctermfg=black ctermbg=gray
+hi TabLine ctermfg=blue ctermbg=gray
 hi TabLineSel ctermfg=Red ctermbg=black
 
 set ambiwidth=double
@@ -84,6 +84,7 @@ set term=xterm
 set tabstop=4
 set incsearch
 set autoindent
+set hlsearch
 "删除多余空格
 "" Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
@@ -92,7 +93,8 @@ func! DeleteTrailingWS()
     exe "normal `z"
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
-
+autocmd BufEnter *.html  set tabstop=2|set shiftwidth=2|set expandtab
+autocmd BufEnter *.js  set tabstop=2|set shiftwidth=2|set expandtab
 map j gj
 map k gk
 map 0 ^
@@ -116,3 +118,12 @@ au filetype ruby        set omnifunc=rubycomplete#Complete
 
 let &t_SI = "\<Esc>]12;purple\x7"
 let &t_EI = "\<Esc>]12;blue\x7"
+
+nmap <SPACE> <SPACE>:noh<CR>
+nnoremap <F2> :set invpaste paste?<CR>
+imap <F2> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+"syntax enable
+"set background=dark
+"colorscheme solarized
