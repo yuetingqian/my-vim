@@ -52,12 +52,13 @@ Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 Bundle 'vim-scripts/pep8'
 Bundle 'vim-scripts/Conque-Shell'
+Bundle 'mfukar/robotframework-vim'
 "Bundle 'FredKSchott/CoVim'
 "let CoVim_default_name = 'Casa Taloyum'
 "let CoVim_default_port = '8888'
 "Bundle 'terryma/vim-multiple-cursors'
 Bundle 'vim-scripts/python.vim--Vasiliev'
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
 
